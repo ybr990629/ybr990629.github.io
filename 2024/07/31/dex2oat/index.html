@@ -13,13 +13,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="什么是dex2oatdex2oat是一个可执行文件，是在设备的 &#x2F;system&#x2F;bin&#x2F;dex2oat，它的作用是编译dex文件，生成oat文件。该程序则是这个功能的载体，而编译业务是在libart-compiler.so中做的。 通过这种编译优化，可以提高使用性能如应用启动速度、应用使用流畅度等，这是ART中重要的一环。 几种dex2oat相关的文件 oat文件：A">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/assets/20240801_150707_image.png">
 <meta property="og:image" content="http://example.com/assets/20240801_150317_Snipaste_2024-08-01_15-01-51.png">
 <meta property="article:published_time" content="2024-07-31T08:45:46.000Z">
-<meta property="article:modified_time" content="2024-08-01T07:06:32.748Z">
+<meta property="article:modified_time" content="2024-08-01T07:07:09.066Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Android">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/assets/20240801_150317_Snipaste_2024-08-01_15-01-51.png">
+<meta name="twitter:image" content="http://example.com/assets/20240801_150707_image.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -116,6 +117,7 @@
 </ul>
 <p>着重介绍与首次开机时间相关的一些流程</p>
 <p>该图是首次开机dex2oat所消耗的时间，可以看到时间很久</p>
+<p><img src="/assets/20240801_150707_image.png"></p>
 <p><img src="/assets/20240801_150317_Snipaste_2024-08-01_15-01-51.png"><br>从以下Log可以看到从耗时主要是从PMS_ready到AMS_ready直接比较长，从trace上来看，首次开机安装系统自带APP的install触发dex2oat时间就占了80%以上的时间</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">logcat -b all| grep &quot;boot_progress&quot;</span><br><span class="line">07-24 01:23:35.152   317   317 I boot_progress_start: 8238</span><br><span class="line">07-24 01:23:39.510   966   966 I boot_progress_system_run: 12596</span><br><span class="line">07-24 01:23:40.896   966   966 I boot_progress_pms_start: 13982</span><br><span class="line">07-24 01:23:40.946   966   966 I boot_progress_pms_system_scan_start: 14032</span><br><span class="line">07-24 01:23:41.885   966   966 I boot_progress_pms_data_scan_start: 14971</span><br><span class="line">07-24 01:23:41.895   966   966 I boot_progress_pms_scan_end: 14981</span><br><span class="line">07-24 01:23:42.117   966   966 I boot_progress_pms_ready: 15203</span><br><span class="line">07-24 01:24:18.976   966   966 I boot_progress_ams_ready: 52062</span><br><span class="line">07-24 01:24:29.109   966  1223 I boot_progress_enable_screen: 62195</span><br></pre></td></tr></table></figure>
 
