@@ -85,7 +85,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/31/package/" data-id="clzaw3gvc0001ks585tvv9q2x" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/31/package/" data-id="clzawb3ly00010c585dmv1sgk" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -170,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/README/" data-id="clzaw3gvi0003ks5801fj0kou" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/README/" data-id="clzawb3m200030c586u7k2v65" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -202,7 +202,7 @@ hexo.extend.deployer.register('git', require('./lib/deployer'));
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/index/" data-id="clzaw3gvk0004ks58dwxuemtt" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/index/" data-id="clzawb3m300040c5850hw92p3" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -230,7 +230,7 @@ hexo.extend.deployer.register('git', require('./lib/deployer'));
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/package/" data-id="clzaw3gvl0005ks586pg25hci" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/package/" data-id="clzawb3m400050c5846902vis" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -361,7 +361,7 @@ module.exports = function(args) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/lib/parse_config/" data-id="clzaw3gvo0008ks58cfnqee1u" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/lib/parse_config/" data-id="clzawb3m600080c588zcgespy" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -543,7 +543,7 @@ function commitMessage(args) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/lib/deployer/" data-id="clzaw3gvn0007ks582s893rsq" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/31/node_modules/hexo-deployer-git/lib/deployer/" data-id="clzawb3m500070c58bttl9z2c" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -597,7 +597,7 @@ function commitMessage(args) {
 </ul>
 <p>着重介绍与首次开机时间相关的一些流程</p>
 <p>该图是首次开机dex2oat所消耗的时间，可以看到时间很久</p>
-<p><img src="/assets/20240731_173133_image.png"></p>
+<p><img src="/assets/20240801_142849_image.png"></p>
 <p>从以下Log可以看到从耗时主要是从PMS_ready到AMS_ready直接比较长，从trace上来看，首次开机安装系统自带APP的install触发dex2oat时间就占了80%以上的时间</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">logcat -b all| grep &quot;boot_progress&quot;</span><br><span class="line">07-24 01:23:35.152   317   317 I boot_progress_start: 8238</span><br><span class="line">07-24 01:23:39.510   966   966 I boot_progress_system_run: 12596</span><br><span class="line">07-24 01:23:40.896   966   966 I boot_progress_pms_start: 13982</span><br><span class="line">07-24 01:23:40.946   966   966 I boot_progress_pms_system_scan_start: 14032</span><br><span class="line">07-24 01:23:41.885   966   966 I boot_progress_pms_data_scan_start: 14971</span><br><span class="line">07-24 01:23:41.895   966   966 I boot_progress_pms_scan_end: 14981</span><br><span class="line">07-24 01:23:42.117   966   966 I boot_progress_pms_ready: 15203</span><br><span class="line">07-24 01:24:18.976   966   966 I boot_progress_ams_ready: 52062</span><br><span class="line">07-24 01:24:29.109   966  1223 I boot_progress_enable_screen: 62195</span><br></pre></td></tr></table></figure>
 
@@ -619,7 +619,7 @@ function commitMessage(args) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/31/dex2oat/" data-id="clzaw3gu80000ks58ee6y2q9x" data-title="开机耗时之dex2oat解析" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/31/dex2oat/" data-id="clzawb3lt00000c583n1wc78w" data-title="开机耗时之dex2oat解析" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
